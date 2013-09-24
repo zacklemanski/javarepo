@@ -21,7 +21,12 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public synchronized void stop() {
-		thread.join();
+		try {
+			thread.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public void run() {
