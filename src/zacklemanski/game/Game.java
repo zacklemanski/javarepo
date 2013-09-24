@@ -28,7 +28,7 @@ public class Game extends Canvas implements Runnable {
 
 	public Game() {
 		Dimension size = new Dimension(width * scale, height * scale);
-		setSize(size);
+		setPreferredSize(size);
 	}
 
 	public synchronized void start() {
