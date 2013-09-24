@@ -12,7 +12,7 @@ public class Game extends Canvas implements Runnable {
 	public static int scale = 3;
 	private static final long serialVersionUID = 1L;
 	public static JFrame frame = new JFrame();
-	private Thread thread;
+	private static Thread thread;
 	static Dimension size = new Dimension(width * scale, height * scale);
 
 	public static void main(String[] args) {
@@ -32,7 +32,6 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public synchronized void start() {
-		thread = new Thread(this, "Display/Game or whatever u want");
 		while (running) {
 			thread.start();
 		}
@@ -49,6 +48,7 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public void run() {
+		thread = new Thread(this, "Display/Game or whatever u want");
 		while (true) {
 
 		}
