@@ -1,14 +1,11 @@
 package zacklemanski.game;
 
-import java.applet.Applet;
-import java.awt.Graphics;
+import java.awt.Canvas;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
-public class Game extends Applet implements KeyListener {
+public class Game extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -20,17 +17,8 @@ public class Game extends Applet implements KeyListener {
 	public Game() {
 		
 	}
-	// Applet methods.
-	public void start() {
+	public static void main(String[] args) {
 		
-	}
-	public void stop() {
-		
-	}
-	public void paint(Graphics g) {
-		while (true) {
-			g.drawOval(x, y, 20, 20);
-		}
 	}
 	
 	// KeyListener Methods
@@ -68,6 +56,11 @@ public class Game extends Applet implements KeyListener {
 	}
 
 	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void run() {
 		// TODO Auto-generated method stub
 		
 	}
