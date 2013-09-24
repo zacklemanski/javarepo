@@ -13,7 +13,6 @@ public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 	public JFrame frame = new JFrame();
 	private static Thread thread;
-	Dimension size;
 
 	public static void main(String[] args) {
 		Game game = new Game();
@@ -28,7 +27,8 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public Game() {
-		size = new Dimension(width * scale, height * scale);
+		Dimension size = new Dimension(width * scale, height * scale);
+		setSize(size);
 	}
 
 	public synchronized void start() {
