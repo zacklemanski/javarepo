@@ -49,9 +49,6 @@ public class Game extends Canvas implements Runnable {
 
 	public void run() {
 		thread = new Thread(this, "Display/Game or whatever u want");
-		while (true) {
-
-		}
 	}
 
 }
