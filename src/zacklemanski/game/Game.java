@@ -11,20 +11,19 @@ public class Game extends Canvas implements Runnable {
 	public static int height = width * 16 / 9;
 	public static int scale = 3;
 	private static final long serialVersionUID = 1L;
-	public static JFrame frame = new JFrame();
+	public JFrame frame = new JFrame();
 	private static Thread thread;
-	static Dimension size;
+	Dimension size;
 
 	public static void main(String[] args) {
 		Game game = new Game();
 
-		Game.frame.setResizable(false);
-		Game.frame.setTitle("Game");
-		Game.frame.add(game);
-		Game.frame.pack();
-		Game.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Game.frame.setVisible(true);
-		Game.frame.setPreferredSize(size);
+		game.frame.setResizable(false);
+		game.frame.setTitle("Game");
+		game.frame.add(game);
+		game.frame.pack();
+		game.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		game.frame.setVisible(true);
 
 	}
 
