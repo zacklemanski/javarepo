@@ -55,10 +55,10 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public void run() {
-		render();
-		update();
-		while (running) {
 
+		while (running) {
+			render();
+			update();
 		}
 
 	}
