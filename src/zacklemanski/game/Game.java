@@ -46,7 +46,17 @@ public class Game extends Canvas implements Runnable {
 
 	}
 
+	public void render() {
+
+	}
+
+	public void update() {
+
+	}
+
 	public void run() {
+		render();
+		update();
 		while (running) {
 
 		}
