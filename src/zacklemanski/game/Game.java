@@ -33,7 +33,7 @@ public class Game extends Canvas implements Runnable {
 
 	public synchronized void start() {
 		thread = new Thread(this, "");
-
+		thread.start();
 	}
 
 	public synchronized void stop() {
@@ -47,7 +47,6 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public void run() {
-		thread.start();
 		while (running) {
 
 			try {
