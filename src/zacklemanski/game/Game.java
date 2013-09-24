@@ -17,13 +17,14 @@ public class Game extends Canvas implements Runnable {
 
 	public static void main(String[] args) {
 		Game game = new Game();
-		frame.setPreferredSize(size);
+
 		frame.setResizable(false);
 		frame.setTitle("Game");
 		frame.add(game);
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		Game.frame.setPreferredSize(size);
 
 	}
 
@@ -32,7 +33,7 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public synchronized void start() {
-		thread = new Thread(this, "");
+		thread = new Thread(this, "Game");
 		thread.start();
 	}
 
