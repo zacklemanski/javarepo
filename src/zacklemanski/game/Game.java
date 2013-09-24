@@ -47,8 +47,9 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public void run() {
+		thread.start();
 		while (running) {
-			thread.start();
+
 			try {
 				Thread.sleep(4000);
 			} catch (InterruptedException e) {
