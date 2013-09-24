@@ -13,23 +13,23 @@ public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 	public static JFrame frame = new JFrame();
 	private static Thread thread;
-	static Dimension size = new Dimension(width * scale, height * scale);
+	static Dimension size;
 
 	public static void main(String[] args) {
 		Game game = new Game();
 
-		frame.setResizable(false);
-		frame.setTitle("Game");
-		frame.add(game);
-		frame.pack();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
+		Game.frame.setResizable(false);
+		Game.frame.setTitle("Game");
+		Game.frame.add(game);
+		Game.frame.pack();
+		Game.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Game.frame.setVisible(true);
 		Game.frame.setPreferredSize(size);
 
 	}
 
 	public Game() {
-
+		size = new Dimension(width * scale, height * scale);
 	}
 
 	public synchronized void start() {
