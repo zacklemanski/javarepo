@@ -15,6 +15,15 @@ public class Game extends Canvas implements Runnable {
 
 	}
 
+	public synchronized void start() {
+		thread = new Thread(this, "Display/Game or whatever u want");
+		thread.start();
+	}
+
+	public synchronized void stop() {
+		thread.join();
+	}
+
 	public void run() {
 		while (true) {
 
