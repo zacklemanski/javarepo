@@ -16,7 +16,7 @@ public class Game extends Canvas implements Runnable {
 	static Dimension size = new Dimension(width * scale, height * scale);
 
 	public static void main(String[] args) {
-		Game game = new Game(size);
+		Game game = new Game();
 		frame.setPreferredSize(size);
 		frame.setResizable(false);
 		frame.setTitle("Game");
@@ -27,7 +27,7 @@ public class Game extends Canvas implements Runnable {
 
 	}
 
-	public Game(Dimension size) {
+	public Game() {
 
 	}
 
@@ -49,11 +49,6 @@ public class Game extends Canvas implements Runnable {
 	public void run() {
 		while (running) {
 
-			try {
-				Thread.sleep(4000);
-			} catch (InterruptedException e) {
-
-			}
 		}
 
 	}
